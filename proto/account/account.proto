@@ -1,0 +1,15 @@
+syntax = "proto3"; // Указываем версию синтаксиса
+
+package account; // Пакет для организации сообщений
+
+import "google/protobuf/timestamp.proto"; // Импортируем тип для времени
+
+option go_package = "proto.account.v1;accountv1";
+
+
+message Account {
+  string user_name = 1;           // Логин
+  float balance = 2;              // Баланс аккаунта
+  google.protobuf.Timestamp date_of_registration = 3; // Дата создания аккаунта
+}
+

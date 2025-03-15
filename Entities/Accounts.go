@@ -3,7 +3,8 @@ package Entities
 import "time"
 
 type Account struct {
-	UserName           string    `json:"user_id"` // Логин
-	Balance            float32   `json:"balance"` // Баланс аккаунта
-	DateOfRegistration time.Time `json:"date"`    // Дата создания аккаунта
+	UserName           string    `yaml:"username"` // Логин
+	Password           string    `yaml:"password"` //Пароль
+	Balance            float32   `yaml:"balance"`  // Баланс аккаунта
+	DateOfRegistration time.Time `yaml:"date"`     // Дата создания аккаунта
 }
